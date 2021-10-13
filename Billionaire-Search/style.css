@@ -1,0 +1,103 @@
+:root {
+    --border-color: #e3e5e4;
+    --background-color: #c3c7ca;
+    --text-color: #34444f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    margin: 30px auto 20px;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+.drag-list {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    list-style-type: none;
+}
+
+.drag-list li {
+    background-color: #fff;
+    display: flex;
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.drag-list li:not(:last-of-type) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.drag-list .number {
+    background-color: var(--background-color);
+    font-size: 28px;
+    height: 60px;
+    width: 60px;
+    display: block;
+    text-align: center;
+    padding-top: 16px;
+}
+
+
+.drag-list .person-name {
+    margin: 0 20px 0 10px;
+}
+
+.drag-list li.right .person-name {
+    color: #3ae374;
+}
+
+.drag-list li.wrong .person-name {
+    color: #ff3838;
+}
+
+.drag-list .draggable {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex: 1;
+}
+
+/* .drag-list li.over .drag {
+    background-color: #eaeaea;
+} */
+
+.check-btn {
+    margin: 20px auto 30px;
+    border: none;
+    background-color: var(--background-color);
+    padding: 10px 20px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 16px;
+    transition: all .4s ease;
+}
+
+.check-btn:active {
+    transform: scale(0.8);
+}
+
+.check-btn:focus {
+    outline: none;
+}

@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    height: 100vh;
+    text-align: center;
+    background-color: #242333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.movie-container {
+    margin: 20px 0;
+}
+
+.movie-container select {
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 15px;
+    /* 
+        MAC系统要出现seclect的padding效果，必须设置appearance， windows则不需要
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none; 
+    */
+}
+
+.showcase {
+    display: flex;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #777;
+    justify-content: space-between;
+}
+
+.showcase li {
+    display: flex;
+    margin: 0px 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.showcase li small {
+    margin-left: 2px;
+}
+
+.container {
+    margin-bottom: 20px;
+    perspective: 800px;
+}
+
+.container .screen {
+    height: 70px;
+    width: 100%;
+    background-color: #fff;
+    margin: 15px 0;
+    transform: rotateX(-25deg);
+    box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.container .row {
+    display: flex;
+}
+
+.container .row div:nth-child(2),
+.container .row div:nth-child(6) {
+    margin-right: 25px;
+}
+
+.container .row .seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.seat {
+    background-color: #444451;
+    width: 20px;
+    height: 12px;
+    margin: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.seat.selected {
+    background-color: #6feaf6;
+}
+
+.seat.occupied {
+    background-color: #fff;
+}
+
+.text {
+    margin: 5px 0;
+}
+
+.text #count,
+.text #total {
+    color: #6feaf6;
+}
