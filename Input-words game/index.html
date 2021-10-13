@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>ITyping Game</title>
+</head>
+<body>
+    <button id="setting-btn" class="setting-btn">
+        <i class="fa fa-cog"></i>
+    </button>
+    <div id="settings" class="settings">
+        <form action="" id="settings-form">
+            <div>
+                <label for="difficulty">Difficulty Setting</label>
+                <select name="" id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Diffcult</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="game-container">
+       <h2>👩‍💻 Typing Game 👨‍💻</h2> 
+       <small>Word:</small>
+       <h1 id="word"></h1>
+       <input type="text" id="text" autocomplete="off" placeholder="Input word...">
+       <p class="time-container">Time left：<span id="time"></span> </p>
+       <p class="score-container">Score：<span id="score"></span> </p>
+       <div id="game-over" class="game-over"></div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
