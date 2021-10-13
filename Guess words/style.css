@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #344951;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 20px 0 10px;
+}
+
+.game-container {
+    padding: 20px 30px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    width: 450px;
+}
+
+.game-container svg {
+    position: absolute;
+    left: 0;
+}
+
+.game-container .figure-part {
+    display: none;
+}
+
+/* svg的几个属性设置 
+   填充 ->fill
+   边框 ->stroke(width/颜色/..）
+       ->stroke-linecap： 线条两端点的设置
+*/
+.figure-container {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.error-letters-container {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.error-letters-container p {
+    margin: 0 0 5px;
+}
+
+.error-letters-container span {
+    font-size: 24px;
+}
+
+.word {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.word .letter {
+    border-bottom: 3px solid #2980b9;
+    display: inline-flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    height: 50px;
+    width: 20px;
+}
+
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.popup {
+    background-color: #2980b9;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.popup img {
+    width: 30px;
+    left: 10px;
+}
+
+.popup button {
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    color: #2980b9;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+.popup button:active {
+    transform: scale(0.8);
+    transition: all .3s ease;
+}
+
+.popup button:focus {
+    outline: 0;
+}
+
+.notification {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 0 0;
+    padding: 15px 20px;
+    position: absolute;
+    bottom: -50px;
+    transition: all .5s ease-in-out;
+}
+
+.notification p {
+    margin: 0;
+}
+
+.notification.show {
+    transform: translateY(-100px);
+}
