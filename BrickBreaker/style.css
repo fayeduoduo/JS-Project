@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0095dd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 2.6rem;
+    color: #fff;
+    margin: 25px auto 20px;
+}
+
+canvas {
+    background-color: #f0f0f0;
+    display: block;
+    border-radius: 5px;
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    transition: all .4s ease;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:hover {
+    background-color: rgb(54, 54, 54);
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+.rules-btn {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    z-index: 1;
+    font-size: 12px;
+}
+
+.start-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    background-color: rgb(124, 123, 123);
+    z-index: 1;
+    font-size: 12px;
+}
+
+.start-btn:hover {
+    background-color: #fff;
+    color: #0095dd;
+}
+
+.rules {
+    position: fixed;
+    left: 0px;
+    top: 0;
+    background-color: rgba(51, 51, 51, 0.829);
+    min-height: 100vh;
+    width: 400px;
+    padding: 20px;
+    line-height: 2;
+    color: #fff;
+    transform: translateX(-400px);
+    transition: transform 1s ease-in-out;
+    z-index: 2;
+}
+
+.rules.show {
+    transform: translateX(0);
+}
+
+.rules h2 {
+    margin: 10px auto 20px;
+}
+
+.rules p {
+    margin-bottom: 20px;
+}
+
+#canvas {
+    margin-bottom: 40px;
+}
+
+.game-over-container {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all .4s ease;
+    z-index: 0;
+}
+
+.game-over-container.show {
+    opacity: 1;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+}
+
+.container img {
+    width: 40px;
+}
+
+.btn-big {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #0095dd;
+    font-size: 20px;
+}
+
+.btn-big:hover {
+    background-color: #18a3e9;
+}
