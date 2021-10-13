@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>记忆卡片</title>
+</head>
+<body>
+    <button id="clear" class="clear-btn">
+        <i class="fas fa-trash"></i>
+        <span>一键清空</span>
+    </button>
+
+    <h1>记忆卡片 
+        <button id="add-btn" class="add-btn btn-small">
+            <i class='fa fa-plus'></i>
+            <span>添加新卡片</span> 
+        </button>
+    </h1>
+    <div class="cards" id="cards-container">
+        <!-- <div class="card active">
+            <div class="inner-card">
+                <div class="inner-card-front">
+                    <p>什么是JS</p>
+                </div>
+                <div class="inner-card-back">
+                    <p>答案</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <div class="inner-card-front">
+                    <p>什么是React</p>
+                </div>
+                <div class="inner-card-back">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, similique!</p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <div class="nav">
+        <button id="prev" class="nav-button">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <p id="current"></p>
+        <button id="next" class="nav-button">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+    <div id="add-container" class="add-container">
+        <h1>添加新卡片 
+            <button id="close" class="btn btn-small btn-ghost">
+                <i class="fa fa-times"></i>
+            </button>
+        </h1>
+        <form action="" class="form-group">
+            <label for="question">问题</label>
+            <textarea name="" id="question" placeholder="请输入问题..."></textarea>
+        </form>
+        <form action="" class="form-group">
+            <label for="answer">答案</label>
+            <textarea name="" id="answer" placeholder="请输入答案..."></textarea>
+        </form>
+        <button id="add-card" class="btn">
+            <i class='fa fa-plus'></i>
+            <span>添加卡片</span>             
+        </button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
